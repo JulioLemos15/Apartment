@@ -5,7 +5,7 @@ import javax.validation.constraints.Size;
 
 public class ParkingSpotDto {
 
-    @NotBlank
+    @NotBlank(message = "O número da vaga é obrigatório!")
     private String parkingSpotNumber;
 
     @Size(max = 7)

@@ -1,25 +1,27 @@
 package com.api.parkingcontrol.dtos;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class ResidentDto {
-    @NotBlank
+    @NotBlank(message = "O nome é Obrigatório!")
     private String responsibleName;
-    @NotBlank
+    @Email(message = "Insira um email Valido!")
+    @NotBlank(message = "O email é Obrigatório!")
     private String email;
-    @NotBlank
+    @NotBlank(message = "O telefone é Obrigatório!")
     @Size(max = 13)
     private String telephone;
-    @NotBlank
+    @NotBlank(message = "O Cpf é Obrigatório!")
     @Size(max = 14)
     private String cpf;
-    @NotBlank
+    @NotBlank(message = "O número do Apartamento é Obrigatorio!")
     private String apartment;
-    @NotBlank
+    @NotBlank(message = "O bloco é Obrigatório!")
     private String block;
-    @NotNull
+    @NotNull(message = "É Obrigatório o id do apartamento para pegar todos os dados que contem no apartamento.")
     private Long id_apartment;
 
     public String getResponsibleName() {

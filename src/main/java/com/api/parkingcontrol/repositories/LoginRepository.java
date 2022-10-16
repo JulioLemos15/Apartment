@@ -1,9 +1,10 @@
 package com.api.parkingcontrol.repositories;
 
-import com.api.parkingcontrol.models.ApartmentModel;
+
+import com.api.parkingcontrol.models.LoginModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ApartmentRepository extends JpaRepository<ApartmentModel, Long> {
+public interface LoginRepository extends JpaRepository<LoginModel, Long> {
 }

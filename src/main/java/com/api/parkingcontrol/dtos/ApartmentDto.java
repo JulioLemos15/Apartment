@@ -6,19 +6,19 @@ import javax.validation.constraints.NotNull;
 
 public class ApartmentDto {
 
-    @NotBlank
+    @NotBlank(message = "É Obrigatório informa a quantidade de Quartos")
     private String bedrooms;
-    @NotBlank
+    @NotBlank(message = "É Obrigatório informar a quantidade de Banheiros")
     private String bathroom;
 
     private Double condominium;
 
     private Double rent;
-    @NotBlank
+    @NotBlank(message = "É Obrigatorio informar o numero do Apartamento")
     private String numberApartment;
-    @NotBlank
+    @NotBlank(message = "É Obrigatorio informar o bloco")
     private String block;
-    @NotNull
+    @NotNull(message = "É obrigatorio informar o id do estacionamento para vincular com o apartamento")
     private Long id_parkingSpot;
 
     public String getBedrooms() {
